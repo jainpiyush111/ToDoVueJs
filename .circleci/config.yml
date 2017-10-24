@@ -15,10 +15,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
+      #bundle files
+      - run: npm run build
       # run tests!
-      - run: npm run e2e
       - run: npm run unit
-      - run: npm test
 
 
